@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html lang="es" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html lang="es" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html lang="es" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="es" class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.min.css?v=1">
+</head>
+<body>
+
+<div id="main-container" class="container">
+
+	<h1>
+		Formulario
+	</h1>
+
+	<div class="row">
+		<div class="col-md-3"></div>
+		<div class="col-md-6">
+
+			<form method="post" class="form-horizontal contact-form"
+			      action="envio.php"
+			      enctype="multipart/form-data">
+
+				<!-- Honeypot SPAM Protection -->
+				<input type="text" name="cf[honeypot]" style="display: none">
+				<!-- END Honeypot SPAM Protection -->
+
+				<div class="form-group">
+					<div class="col-md-12">
+						<input type="text" name="cf[name]" class="form-control required" placeholder="Nombres y Apellidos">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-md-12">
+						<input type="email" name="cf[email]" class="form-control required email" placeholder="Correo electrónico">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-md-12">
+            <textarea name="cf[message]" rows="6" class="form-control required"
+                      placeholder="mensaje..."></textarea>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-md-12">
+						<input type="file" id="foto" name="cf[foto]" class="required"/> <label for="foto">No debe pesar mas de
+						1Mb.</label>
+						<input type="hidden" id="img" name="cf[img]"/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-md-12">
+						<input type="submit" value="ENVIAR" class="btn btn-sm btn-block btn-primary">
+					</div>
+				</div>
+
+			</form>
+
+		</div>
+		<div class="col-md-3"></div>
+
+		<div class="col-md-12">
+			<div class="resultado"></div>
+		</div>
+
+	</div>
+
+</div>
+
+<script src="js/vendor/jquery.min.js"></script>
+<script src="js/vendor/jquery.form.min.js"></script>
+<script src="js/vendor/jquery.validate.min.js"></script>
+<script src="js/init.min.js?v=1"></script>
+</body>
+</html>
